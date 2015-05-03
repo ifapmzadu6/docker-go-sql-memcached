@@ -1,7 +1,7 @@
 from ubuntu
 
 
-RUN apt-get update -y
+RUN sudo apt-get update -y
 
-RUN apt-get install mysql memcached go -y
+RUN sudo apt-get install mysql memcached go -y
 
