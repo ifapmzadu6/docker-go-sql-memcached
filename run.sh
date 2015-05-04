@@ -6,4 +6,4 @@ docker rm hoppin
 docker build --no-cache --rm -t test:0.1.0 .
 
 # リンクして実行
-docker run -d --name hoppin --link mysql:mysql test:0.1.0
+docker run -d -p 80:8080 --name hoppin --link mysql:mysql test:0.1.0
