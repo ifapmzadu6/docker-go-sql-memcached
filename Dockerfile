@@ -1,27 +1,27 @@
 from ubuntu
 
-
+# apt-get
 RUN sudo apt-get update -y
-RUN sudo apt-get install git wget -y
-RUN sudo apt-get install mysql-server memcached -y
+RUN sudo apt-get install -y git wget
 
-# mysql
-RUN sudo service mysql
+# memcached
+RUN sudo apt-get install -y memcached
 
 # golang
-RUN wget --no-check-certificate --no-verbose https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
+RUN wget --no-verbose https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.4.2.linux-amd64.tar.gz
 
-RUN mkdir $HOME/go
-RUN export GOPATH=$HOME/go
-RUN export PATH=$PATH:$GOPATH/bin
-
+ENV GOPATH /go
+ENV GOROOT /usr/local/go
+ENV PATH /usr/local/go/bin:/go/bin:/usr/local/bin:$PATH
 
 # project
-RUN cd
-RUN git clone https://github.com/ifapmzadu6/Hoppin-Server
-RUN cd Hoppin-Server
-
 RUN go get github.com/bradfitz/gomemcache/memcache
 RUN go get github.com/go-sql-driver/mysql
+
+RUN git clone https://github.com/ifapmzadu6/Hoppin-Server
+
+EXPOSE 3306
+
+CMD go run /Hoppin-Server/main.go
 
