@@ -19,7 +19,7 @@ chmod u+x mysql_remove.sh
 ./mysql_setup.sh
 ```
 
-## 3.Run Server
+## 3.Run Go Server ( https://github.com/ifapmzadu6/Hoppin-Server )
 ```
 ./run.sh
 ```
