@@ -21,7 +21,7 @@ RUN go get github.com/go-sql-driver/mysql
 
 RUN git clone https://github.com/ifapmzadu6/Hoppin-Server
 
-EXPOSE 3306
+EXPOSE 3306 80 443
 
 CMD go run /Hoppin-Server/main.go
 
