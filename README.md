@@ -21,7 +21,7 @@ chmod u+x mysql_remove.sh
 
 ## 3.Run Go Server
 ```
-./run.sh
+./debug.sh
 ```
 
 Go Server at https://github.com/ifapmzadu6/Hoppin-Server
