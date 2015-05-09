@@ -1,3 +1,6 @@
+# このディレクトリに移動
+cd `dirname $0`
+
 # 前回起動中のものがあれば削除
 docker stop hoppin
 docker rm hoppin
