@@ -14,5 +14,5 @@ docker stop hoppin
 docker rm hoppin
 
 # リンクして実行
-docker run -d -p 443:8080 -v $(pwd)/ssl:/ssl:ro -e MYSQL_ADDR=$MYSQL_ADDR -e MYSQL_PASSWORD=$MYSQL_PASSWORD --name hoppin test:0.1.0
+docker run -d -p 443:8080 -e MYSQL_ADDR=$MYSQL_ADDR -e MYSQL_PASSWORD=$MYSQL_PASSWORD -v $(pwd)/ssl:/ssl:ro --name hoppin test:0.1.0
 
