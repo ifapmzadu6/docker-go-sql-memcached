@@ -1,2 +1,6 @@
 docker stop hoppin
-docker rm hoppin
+
+# Delete all containers
+docker rm $(docker ps -a -q)
+# Delete all images
+docker rmi $(docker images -q)
