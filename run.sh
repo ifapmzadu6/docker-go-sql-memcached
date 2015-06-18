@@ -1,6 +1,9 @@
 # このディレクトリに移動
 cd `dirname $0`
 
+echo $MYSQL_ADDR
+echo $MYSQL_PASSWORD
+
 # Delete all containers
 docker rm $(docker ps -a -q)
 # Delete all images
