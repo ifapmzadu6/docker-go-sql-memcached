@@ -19,6 +19,7 @@ ENV PATH /usr/local/go/bin:/go/bin:/usr/local/bin:$PATH
 # project
 RUN go get github.com/bradfitz/gomemcache/memcache
 RUN go get github.com/go-sql-driver/mysql
+RUN go get github.com/gorilla/handlers
 
 RUN git clone https://github.com/ifapmzadu6/Hoppin-Server
 
