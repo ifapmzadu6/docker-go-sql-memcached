@@ -9,8 +9,8 @@ RUN sudo apt-get install -y git wget
 RUN sudo apt-get install -y memcached
 
 # golang
-RUN wget --no-verbose https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
-RUN tar -C /usr/local -xzf go1.4.2.linux-amd64.tar.gz
+RUN wget --no-verbose https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.5.linux-amd64.tar.gz
 
 ENV GOPATH /go
 ENV GOROOT /usr/local/go
